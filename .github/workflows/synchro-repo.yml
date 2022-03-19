@@ -18,6 +18,6 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: main
-          commit-message：${{ MESSAGEDATA }}
+          commit-message：${{ env.MESSAGEDATA }}
           folder: .
           repository-name: 'tinymce-plugin/tinymce-plugin-docs'
