@@ -3,7 +3,7 @@ name:  synchro-repo
 on: [ push, delete, create ]
 
 jobs:
-  build-and-deploy:
+  deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,5 +15,6 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: main
+          commit-message：${{ github.event.head_commit.message }}
           folder: .
           repository-name: 'tinymce-plugin/tinymce-plugin-docs'
