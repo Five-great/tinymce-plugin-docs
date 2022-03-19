@@ -15,5 +15,5 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: main
-          folder: guide
+          folder: .
           repository-name: 'tinymce-plugin/tinymce-plugin-docs'
